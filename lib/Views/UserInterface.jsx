@@ -8,10 +8,16 @@ import PropTypes from "prop-types";
 import React from "react";
 import RelatedMaps from "./RelatedMaps";
 import SplitPoint from "terriajs/lib/ReactViews/SplitPoint";
-import StandardUserInterface from "terriajs/lib/ReactViews/StandardUserInterface/StandardUserInterface";
+// import StandardUserInterface from "terriajs/lib/ReactViews/StandardUserInterface/StandardUserInterface";
 import version from "../../version";
 
 import "./global.scss";
+
+const StandardUserInterface = require("terriajs/lib/Core/container").injectComponents(
+  [
+    /*[WorkbenchItemFactory, MyWorkbenchItemFactory]*/
+  ]
+);
 
 // function loadAugmentedVirtuality(callback) {
 //   require.ensure(
