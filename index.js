@@ -25,6 +25,11 @@ import render from './lib/Views/render';
 import registerCatalogMembers from 'terriajs/lib/Models/Catalog/registerCatalogMembers';
 import defined from 'terriajs-cesium/Source/Core/defined';
 
+// i18n 한국어
+import i18next from 'i18next';
+import translationKr from './lib/Language/ko-KR/translation.json';
+i18next.addResourceBundle('ko-KR', 'translation', translationKr, true, true);
+
 // Register all types of catalog members in the core TerriaJS.  If you only want to register a subset of them
 // (i.e. to reduce the size of your application if you don't actually use them all), feel free to copy a subset of
 // the code in the registerCatalogMembers function here instead.

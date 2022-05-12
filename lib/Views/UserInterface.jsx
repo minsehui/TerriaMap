@@ -9,14 +9,14 @@ import React from "react";
 import RelatedMaps from "./RelatedMaps";
 import SplitPoint from "terriajs/lib/ReactViews/SplitPoint";
 // import StandardUserInterface from "terriajs/lib/ReactViews/StandardUserInterface/StandardUserInterface";
+import WorkbenchItemFactory from "terriajs/lib/ReactViews/Workbench/WorkbenchItemFactory";
+import WorkbenchItemFactory_ from "../ViewModels/WorkbenchItemFactory";
 import version from "../../version";
 
 import "./global.scss";
 
 const StandardUserInterface = require("terriajs/lib/Core/container").injectComponents(
-  [
-    /*[WorkbenchItemFactory, MyWorkbenchItemFactory]*/
-  ]
+  [[WorkbenchItemFactory, WorkbenchItemFactory_]]
 );
 
 // function loadAugmentedVirtuality(callback) {
